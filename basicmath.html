@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <a href="main.html">Back</a>
+        <br>
         <br>Addition <br> 1st number
         <input type="text" id="addnum1" name="name" required minlength="1" maxlength="20" size="10">
         <br> Second Number
         <input type="text" id="addnum2" name="name" required minlength="1" maxlength="20" size="10">
         <br>
-        <button type="button" onclick=GetADDNum()>Add</button>
+        <button type="button" onclick=GetADDNum()>ADD</button>
     </body>
     <script>
         function GetADDNum() {
@@ -20,13 +20,13 @@
     </script>
 
     <body>
-        <a href="main.html">Back</a>
+        <br>
         <br>Subtraction <br> 1st number
         <input type="text" id="subnum1" name="name" required minlength="1" maxlength="20" size="10">
         <br> Second Number
         <input type="text" id="subnum2" name="name" required minlength="1" maxlength="20" size="10">
         <br>
-        <button type="button" onclick=GetSUBNum()>Add</button>
+        <button type="button" onclick=GetSUBNum()>SUB</button>
     </body>
     <script>
         function GetSUBNum() {
@@ -39,21 +39,44 @@
     </script>
 
     <body>
-        <a href="main.html">Back</a>
+        <br>
         <br>Multiplication <br> 1st number
         <input type="text" id="mulnum1" name="name" required minlength="1" maxlength="20" size="10">
         <br> Second Number
         <input type="text" id="mulnum2" name="name" required minlength="1" maxlength="20" size="10">
         <br>
-        <button type="button" onclick=GetMULNum()>Add</button>
+        <button type="button" onclick=GetMULNum()>MUL</button>
     </body>
     <script>
         function GetMULNum() {
             MULNUM1 = document.getElementById('mulnum1').value;
-            alert(SUBNUM1);
+            alert(MULNUM1);
             MULNUM2 = document.getElementById('mulnum2').value;
             alert(MULNUM2);
-            alert(+MULNUM1 - +MULNUM2)
+            alert(+MULNUM1 * +MULNUM2)
         }
 </script>
+
+    <body>
+        <br>
+        <br>Division <br> 1st number
+        <input type="text" id="divnum1" name="name" required minlength="1" maxlength="20" size="10">
+        <br> Second Number
+        <input type="text" id="divnum2" name="name" required minlength="1" maxlength="20" size="10">
+        <br>
+        <button type="button" onclick=GetDIVNum()>DIV</button>
+    </body>
+    <script>
+        function GetDIVNum() {
+            DIVNUM1 = document.getElementById('divnum1').value;
+            alert(DIVNUM1);
+            DIVNUM2 = document.getElementById('divnum2').value;
+            alert(DIVNUM2);
+            alert(+DIVNUM1 / +DIVNUM2)
+        }
+    </script>
+    <body>
+        <br>
+        <a href="main.html">Back</a>
+    </body>
 </html>

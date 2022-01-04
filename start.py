@@ -1,4 +1,8 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+import django
+
+
 
 class Serv(BaseHTTPRequestHandler):
 
@@ -13,7 +17,5 @@ class Serv(BaseHTTPRequestHandler):
             self.send_response(404)
         self.end_headers()
         self.wfile.write(bytes(file_to_open, 'utf-8'))
-
-
 httpd = HTTPServer(('10.0.0.120',8080),Serv)
 httpd.serve_forever()
