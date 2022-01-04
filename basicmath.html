@@ -1,4 +1,59 @@
 <!DOCTYPE html>
 <html>
-    
+    <body>
+        <a href="main.html">Back</a>
+        <br>Addition <br> 1st number
+        <input type="text" id="addnum1" name="name" required minlength="1" maxlength="20" size="10">
+        <br> Second Number
+        <input type="text" id="addnum2" name="name" required minlength="1" maxlength="20" size="10">
+        <br>
+        <button type="button" onclick=GetADDNum()>Add</button>
+    </body>
+    <script>
+        function GetADDNum() {
+            ADDNUM1 = document.getElementById('addnum1').value;
+            alert(ADDNUM1);
+            ADDNUM2 = document.getElementById('addnum2').value;
+            alert(ADDNUM2);
+            alert(+ADDNUM1 + +ADDNUM2)
+        }
+    </script>
+
+    <body>
+        <a href="main.html">Back</a>
+        <br>Subtraction <br> 1st number
+        <input type="text" id="subnum1" name="name" required minlength="1" maxlength="20" size="10">
+        <br> Second Number
+        <input type="text" id="subnum2" name="name" required minlength="1" maxlength="20" size="10">
+        <br>
+        <button type="button" onclick=GetSUBNum()>Add</button>
+    </body>
+    <script>
+        function GetSUBNum() {
+            SUBNUM1 = document.getElementById('subnum1').value;
+            alert(SUBNUM1);
+            SUBNUM2 = document.getElementById('subnum2').value;
+            alert(SUBNUM2);
+            alert(+SUBNUM1 - +SUBNUM2)
+        }
+    </script>
+
+    <body>
+        <a href="main.html">Back</a>
+        <br>Multiplication <br> 1st number
+        <input type="text" id="mulnum1" name="name" required minlength="1" maxlength="20" size="10">
+        <br> Second Number
+        <input type="text" id="mulnum2" name="name" required minlength="1" maxlength="20" size="10">
+        <br>
+        <button type="button" onclick=GetMULNum()>Add</button>
+    </body>
+    <script>
+        function GetMULNum() {
+            MULNUM1 = document.getElementById('mulnum1').value;
+            alert(SUBNUM1);
+            MULNUM2 = document.getElementById('mulnum2').value;
+            alert(MULNUM2);
+            alert(+MULNUM1 - +MULNUM2)
+        }
+</script>
 </html>
