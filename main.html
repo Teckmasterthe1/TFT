@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
     <body>
+        <script>
+            let y = document.cookie;
+            let decodedCookie = decodeURIComponent(document.cookie);
+            alert("Hello "+decodedCookie)
+        </script>
+
         <p>
-            Hello
+            Hello, Enter your name
+            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
             <a href="calculator.html">calculator</a>
+            <button type="button" onclick=Getname()>Add Name</button>
+            <button type="button" onclick=eraseCookie()>Delete Cookies</button>
+            <input type="text" id="deletename" name="name" required minlength="4" maxlength="8" size="10">
         </p>
         <p id="output">
 
         </p>
+        <script>
+            function Getname() {
+                name = document.getElementById("name").value;
+                alert(name);
+                document.cookie = name,"=", "name" + ";" + "maxage=600";
+                let x = document.cookie;
+                let decodedCookie = decodeURIComponent(document.cookie);
+                alert(decodedCookie)
+            }
+            //document.getElementById("name").value = name;
+            //alert(name)
+            function eraseCookie(name) {   
+                deletename = document.getElementById("deletename").value;
+                alert(deletename);
+                document.cookie = deletename + '=; Max-Age=-9999999';
+            }
+
+        </script>
     </body>
 </html>

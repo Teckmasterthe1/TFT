@@ -4,7 +4,7 @@ class Serv(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == '/':
-            self.path = '/test.html'
+            self.path = '/main.html'
         try:
             file_to_open = open(self.path[1:]).read()
             self.send_response(200)
