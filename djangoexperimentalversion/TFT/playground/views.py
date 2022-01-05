@@ -57,7 +57,7 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 def main(request):
-    subprocess.Popen(["rm", "-r", "utils.logging"])
+    #subprocess.Popen(["rm", "-r", "utils.logging"])
     return render(request, 'apphub/main.html')
 
 def calculator(request):
