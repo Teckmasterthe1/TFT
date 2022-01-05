@@ -16,13 +16,7 @@
             function sayHello() {
                 alert("Hello "+document.cookie)
             }
-            function Getname() {
-                name = document.getElementById("name").value;
-                document.cookie = name,"=", "name" + ";" + "maxage=600";
-                let x = document.cookie;
-                let decodedCookie = decodeURIComponent(document.cookie);
-                alert("Hello "+decodedCookie+" When every you referesh the website for the next ten minutes, it will greet you by your name")
-            }
+
         </script>
     </body>
 </html>
