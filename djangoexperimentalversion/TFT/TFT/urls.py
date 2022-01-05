@@ -20,4 +20,4 @@ urlpatterns = [
     path('playground/', include('playground.urls')),
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
-]
+    ]
