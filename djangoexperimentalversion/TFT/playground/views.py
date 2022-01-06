@@ -59,7 +59,7 @@ def vote(request, question_id):
 def main(request):
     #subprocess.Popen(["rm", "-r", "utils.logging"])
     return render(request, 'apphub/main.html')
-
+        
 def calculator(request):
     return render(request, 'apphub/calculator.html')
 
